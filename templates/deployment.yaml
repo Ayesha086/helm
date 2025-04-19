@@ -17,17 +17,17 @@ spec:
       tier: frontend
       purpose: deployment
   # pod template
-  template:
-    metadata:
-      labels:
-        app: nginx
-        tier: frontend
-        purpose: deployment
+    template:
+      metadata:
+        labels:
+          app: nginx
+          tier: frontend
+          purpose: deployment
     spec:   
-     containers:
-     - name: nginx
-       image: nginx:{{ .Values.deployment.imageVersion }} #image version frequently changes
-       ports:
-       - containerPort: 80   
+      containers:
+      - name: nginx
+        image: nginx:{{ .Values.deployment.imageVersion }} #image version frequently changes
+        ports:
+        - containerPort: 80   
 
 
