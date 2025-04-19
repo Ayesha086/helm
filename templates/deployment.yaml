@@ -13,9 +13,9 @@ spec:
   selector:
   # replicaset use these labels to find the pods for creating desired number of replicas
     matchLabels:
-     app: nginx
-     tier: frontend
-     purpose: deployment
+      app: nginx
+      tier: frontend
+      purpose: deployment
   # pod template
   template:
     metadata:
@@ -26,7 +26,7 @@ spec:
     spec:   
      containers:
      - name: nginx
-       image: nginx: {{.Values.deployment.imageVersion }} #image version frequently changes
+       image: nginx:{{ .Values.deployment.imageVersion }} #image version frequently changes
        ports:
        - containerPort: 80   
 
