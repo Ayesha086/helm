@@ -12,6 +12,6 @@ spec:
    - protocol: TCP
      port: 80 #service port
      targetPort: 80 #container port number
-     nodePort: {{ .Values.service.nodePort }} # imagine this will change
+     nodePort: 30007 # imagine this will change
 
 
