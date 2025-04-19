@@ -26,7 +26,7 @@ spec:
     spec:   
      containers:
      - name: nginx
-       image: nginx:{{ .Values.deployment.imageVersion }} #image version frequently changes
+       image: nginx:{ { .Values.deployment.imageVersion } } #image version frequently changes
        ports:
        - containerPort: 80   
 
