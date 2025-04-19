@@ -9,7 +9,7 @@ metadata:
     purpose: deployment
 spec:
 # modify replicas according to your case
-  replicas: {{ .Values.deployment.replicas }}: #assume this will change
+  replicas: {{ .Values.deployment.replicas : }} #assume this will change
   selector:
   # replicaset use these labels to find the pods for creating desired number of replicas
     matchLabels:
